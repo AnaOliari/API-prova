@@ -9,16 +9,16 @@ import ListarNaoConcluidas from "./pages/ListarNaoConcluidas";
 const App: React.FC = () => {
   return (
     <Router>
-      <Switch>
-        <Route path="/tarefa/listar" component={ListarTarefas} />
-        <Route path="/tarefa/cadastrar" component={CadastrarTarefa} />
-        <Route path="/tarefa/alterar" component={AlterarTarefa} />
-        <Route path="/tarefa/listarconcluidas" component={ListarConcluidas} />
+      <Routes>
+        <Route path="/tarefa/listar" element={<ListarTarefas />} />
+        <Route path="/tarefa/cadastrar" element={<CadastrarTarefa />} />
+        <Route path="/tarefa/alterar" element={<AlterarTarefa />} />
+        <Route path="/tarefa/listarconcluidas" element={<ListarConcluidas />} />
         <Route
           path="/tarefa/listarnaoconcluidas"
-          component={ListarNaoConcluidas}
+          element={<ListarNaoConcluidas />}
         />
-      </Switch>
+      </Routes>
     </Router>
   );
 };
